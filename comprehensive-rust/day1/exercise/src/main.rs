@@ -1,6 +1,7 @@
-fn main() {
-    let x: i32 = 10;
+fn interproduct(a: i16, b: i16, c:i16) -> i16{
+    return a * b + b * c + c * a;
+}
 
-    x = 20;
-    println!("x:{x}")
+fn main() {
+   println!("{}", interproduct(120, 100, 248))
 }

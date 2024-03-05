@@ -3,5 +3,11 @@ fn interproduct(a: i16, b: i16, c:i16) -> i16{
 }
 
 fn main() {
-   println!("{}", interproduct(120, 100, 248))
+   let greetings: &str = "Hello, ";
+   let mut sentence = String::new();
+
+   sentence.push_str(greetings);
+   sentence.push_str("World");
+
+   println!("{}",sentence);
 }

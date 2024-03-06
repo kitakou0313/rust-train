@@ -1,13 +1,16 @@
-fn interproduct(a: i16, b: i16, c:i16) -> i16{
-    return a * b + b * c + c * a;
+fn take_u32(i: u32) {
+    println!("{} is u32", i)
+}
+
+fn take_i8(i: i8) {
+    println!("{} is i8", i)
 }
 
 fn main() {
-   let greetings: &str = "Hello, ";
-   let mut sentence = String::new();
+    let x = 10;
+    let y = 2;
 
-   sentence.push_str(greetings);
-   sentence.push_str("World");
-
-   println!("{}",sentence);
+    take_u32(x);
+    take_u32(y);
+    take_i8(y);
 }

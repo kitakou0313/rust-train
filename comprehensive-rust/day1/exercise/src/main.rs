@@ -1,9 +1,14 @@
 fn main() {
-    let y = 3;
-    let x = {
-        let z = 10;
-        y - z
-    };
+    let a = 10;
 
-    println!("{}", x)
+    {
+        let a = 20;
+        println!("{}", a);
+
+        // shadowing
+        let a = true;
+        println!("{}", a)
+    }
+
+    println!("{}", a)
 }

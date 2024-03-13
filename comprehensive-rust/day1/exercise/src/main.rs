@@ -1,17 +1,20 @@
-// macro
-// コンパイル時に展開される
-// 末尾に!をつけて呼び出す
-// 可変長の引数を与えられる
-fn functional(n: u32) -> u32 {
-    let mut product = 1;
-
-    for i in 1..n {
-        product *= dbg!(i)
+fn collatz_length(mut n: i32) -> u32 {
+    if n == 0 {
+        panic!("n = 0")
     }
 
-    return product;
+    let mut length = 1;
+    while n != 1 {
+        if n % 2 == 0 {
+            n = n/2
+        }else {
+            n = 3*n + 1
+        }
+        length += 1;
+    }
+    return length;
 }
-
-fn main() {
-    println!("{}", functional(10))
-}
+  
+  fn main() {
+    dbg!(collatz_length(3));
+  }

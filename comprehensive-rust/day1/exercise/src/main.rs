@@ -1,13 +1,17 @@
-fn gcd(a: u32, b:u32) -> u32 {
-    // 最後のexpressionが自動的に返り値になる
-    // ;をつけると返らない
-    if b > 0 {
-        {gcd(b, a % b)}
-    }else {
-        a
+// macro
+// コンパイル時に展開される
+// 末尾に!をつけて呼び出す
+// 可変長の引数を与えられる
+fn functional(n: u32) -> u32 {
+    let mut product = 1;
+
+    for i in 1..n {
+        product *= dbg!(i)
     }
+
+    return product;
 }
 
 fn main() {
-    println!("{}", gcd(101, 10))
+    println!("{}", functional(10))
 }

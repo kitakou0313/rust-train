@@ -15,6 +15,10 @@ fn collatz_length(mut n: i32) -> u32 {
     return length;
 }
   
-  fn main() {
-    dbg!(collatz_length(3));
-  }
+fn main() {
+    let mut a: [i8; 10] = [42; 10];
+    a[5] = 10;
+
+    println!("a: {a:?}");
+
+}

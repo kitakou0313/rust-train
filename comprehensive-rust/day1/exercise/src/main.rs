@@ -16,8 +16,9 @@ fn collatz_length(mut n: i32) -> u32 {
 }
   
 fn main() {
+    // RustのArray定義では要素の数も型に含まれる
     let mut a: [i8; 10] = [42; 10];
-    a[5] = 10;
+    a[11] = 11;
 
     println!("a: {a:?}");
 

@@ -16,9 +16,11 @@ fn collatz_length(mut n: i32) -> u32 {
 }
   
 fn main() {
-    // ()という型も定義できる
-    // 他言語におけるvoidのような扱い
-    let t:(i32, String) = (7, "hoge".to_string());
+    let primes:[i32;8] = [2, 3, 5, 7, 11, 13, 17, 19];
 
-    println!("{}", t.0);
+    for prime in primes {
+        for i in 2..prime {
+            assert_ne!(prime % i , 0);
+        }
+    }
 }

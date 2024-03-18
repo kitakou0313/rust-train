@@ -14,13 +14,16 @@ fn collatz_length(mut n: i32) -> u32 {
     }
     return length;
 }
-  
-fn main() {
-    let primes:[i32;8] = [2, 3, 5, 7, 11, 13, 17, 19];
 
-    for prime in primes {
-        for i in 2..prime {
-            assert_ne!(prime % i , 0);
-        }
-    }
+struct Foo{
+    a: i32,
+    b: i32
+}
+
+fn func(foo:Foo) {
+    let Foo {a, b} = foo;
+}
+
+fn main() {
+    let foo: Foo
 }

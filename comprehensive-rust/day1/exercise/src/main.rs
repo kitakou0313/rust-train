@@ -1,29 +1,31 @@
-fn collatz_length(mut n: i32) -> u32 {
-    if n == 0 {
-        panic!("n = 0")
-    }
+fn traspose_matrix(matrix: [[i32;3];3]) -> [[i32;3];3] {
+    
+    let mut transposed_matrix: [[i32;3];3] = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+    ];
 
-    let mut length = 1;
-    while n != 1 {
-        if n % 2 == 0 {
-            n = n / 2
-        }else {
-            n = 3 * n + 1
+    for i in 0..matrix.len(){
+        for j in 0..matrix[0].len() {
+            transposed_matrix[j][i] = matrix[i][j]
         }
-        length += 1;
-    }
-    return length;
-}
+    };
 
-struct Foo{
-    a: i32,
-    b: i32
-}
-
-fn func(foo:Foo) {
-    let Foo {a, b} = foo;
+    return  transposed_matrix;
 }
 
 fn main() {
-    let foo: Foo
+    let matrix = [
+        [101, 102, 103], // <-- the comment makes rustfmt add a newline
+        [201, 202, 203],
+        [301, 302, 303],
+    ];
+
+    println!("matrix: {:#?}", matrix);
+
+    let trasposed = traspose_matrix(matrix);
+    
+    println!("matrix: {:#?}", trasposed);
+
 }

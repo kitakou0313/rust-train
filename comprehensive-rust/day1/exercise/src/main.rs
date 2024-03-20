@@ -13,5 +13,7 @@ fn main() {
         age: 27
     };
 
+    let peter2 = Person{name:String::from("Perter2"), ..peter};
+
     describe(&peter)
 }

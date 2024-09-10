@@ -16,4 +16,5 @@ fn main() {
     let peter2 = Person{name:String::from("Perter2"), ..peter};
 
     describe(&peter)
+    describe(&peter)
 }
